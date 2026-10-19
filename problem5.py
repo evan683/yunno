@@ -29,3 +29,17 @@ Enter c: 8
 the equation can not be factored
 
 """
+import math
+a = int(input("input a number for a "))
+b = int(input("input a number for b "))
+c = int(input("input a number for c "))
+d = b**2 - (4*a*c)
+def isperfectsquare(d):
+    if d < 0:
+        return False
+    root = math.isqrt(d)
+    return root * root == d
+if isperfectsquare(d) == True:
+    print("the equation can be factored")
+else:
+    print("the equation cannot be factored")

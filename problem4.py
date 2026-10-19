@@ -33,3 +33,21 @@ that is an obtuse triangle
 
 
 """
+a = float(input("input a number "))
+b = float(input("input a number "))
+c = float(input("input a number "))
+list = [a, b, c]
+list.sort()
+a = list[0]
+b = list[1]
+c = list[2]
+tol = 0.02*(c**2)
+ans = a**2 + b**2
+low = (c**2) - tol
+high = (c**2) + tol
+if low <= ans <= high:
+    print("this is a right triangle")
+if ans > low:
+   print("this is an acute triangle")
+if ans < high:
+    print("this is an obtuse triangle")
